@@ -31,7 +31,7 @@ export default (() => {
 				align-self="auto"
 				align-items="center"
 			/>
-			<Box quarkly-title="HeroContent" margin="0px 0px 32px 0px" max-width="800px">
+			<Box quarkly-title="HeroContent" margin="0px 0px 32px 0px" max-width="800px" as="main">
 				<Components.Logo max-width="320px" height="auto" margin="0px 0px 48px 0px" lg-margin="0px 0px 32px 0px" />
 				<Text
 					font="--headline1"
@@ -56,7 +56,9 @@ export default (() => {
 				<Text font="--lead" color="--lightD2" as="p" quarkly-title="Subtitle">
 					Get notified when Mollie is available with Falcon Platform.
 				</Text>
-				<Components.FormStackHorizontal />
+				<Components.FormStackHorizontal margin="32px 0 16px 0">
+					<Override slot="stackItem" />
+				</Components.FormStackHorizontal>
 				<Link
 					href="https://www.deity.io"
 					font="--base"
